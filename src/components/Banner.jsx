@@ -1,10 +1,12 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import bannerImg from "../assets/banner.png";
 
 const Banner = () => {
   return (
     <section className="bg-white pt-12 pb-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="flex flex-col lg:flex-row items-center gap-12">
 
           {/* Left Content */}
@@ -23,18 +25,15 @@ const Banner = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
                 href="#products"
-                className="bg-violet-600 hover:bg-violet-700 text-white font-semibold px-7 py-3 rounded-full transition-all hover:shadow-lg hover:shadow-violet-200"
+                className="bg-gradient-to-r from-violet-800 to-violet-600 hover:from-violet-700 hover:to-violet-500 text-white font-semibold px-7 py-3 rounded-full transition-all hover:shadow-lg hover:shadow-violet-200"
               >
                 Explore Products
               </a>
               <a
                 href="#demo"
-                className="flex items-center justify-center gap-2 border border-gray-300 hover:border-violet-400 text-gray-700 hover:text-violet-600 font-semibold px-7 py-3 rounded-full transition-all"
+                className=" border border-violet-700 hover:border-violet-500 text-violet-700 hover:text-violet-500 font-semibold px-7 py-3 rounded-full transition-all"
               >
-                <span className="w-7 h-7 bg-gray-100 rounded-full flex items-center justify-center text-xs">
-                  ▶
-                </span>
-                Watch Demo
+                <FontAwesomeIcon icon={faPlay} className="mr-2" /> Watch Demo
               </a>
             </div>
           </div>

@@ -7,7 +7,7 @@ const Navbar = () => {
 
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <img src={logo} alt="DigiTools" className="h-8 w-auto object-contain"/>
+            <img src={logo} alt="DigiTools" className="h-8 w-auto object-contain" />
           </div>
 
           {/* Nav Links */}
@@ -31,10 +31,7 @@ const Navbar = () => {
             >
               Login
             </a>
-            <a
-              href="#"
-              className="bg-violet-600 hover:bg-violet-700 text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors"
-            >
+            <a href="#" className="bg-gradient-to-r from-violet-700 to-violet-600 hover:from-violet-800 hover:to-violet-700 text-white text-sm font-semibold px-5 py-2 rounded-full transition-all">
               Get Started
             </a>
           </div>
