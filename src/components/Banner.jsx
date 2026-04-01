@@ -12,9 +12,9 @@ const Banner = () => {
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
             <span className="inline-flex items-center gap-2 bg-violet-50 border border-violet-200 text-violet-700 text-xs font-semibold px-4 py-1.5 rounded-full">
-            <span className="w-1.5 h-1.5 bg-violet-500 rounded-full animate-pulse"></span>
-            New: AI-Powered Tools Available
-          </span>
+              <span className="w-1.5 h-1.5 bg-violet-500 rounded-full animate-pulse"></span>
+              New: AI-Powered Tools Available
+            </span>
             <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
               Supercharge Your{" "}Digital Workflow
             </h1>
@@ -25,15 +25,15 @@ const Banner = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
                 href="#products"
-                className="bg-gradient-to-r from-violet-800 to-violet-600 hover:from-violet-700 hover:to-violet-500 text-white font-semibold px-7 py-3 rounded-full transition-all hover:shadow-lg hover:shadow-violet-200"
+                className="bg-gradient-to-r from-[#4f46e5] via-[#7c3aed] to-[#aa00b9] hover:from-violet-700 hover:via-[#711eff] hover:to-[#c206d3] text-white font-semibold px-7 py-3 rounded-full transition-all hover:shadow-lg hover:shadow-violet-200"
               >
                 Explore Products
               </a>
-              <a
-                href="#demo"
-                className=" border border-violet-700 hover:border-violet-500 text-violet-700 hover:text-violet-500 font-semibold px-7 py-3 rounded-full transition-all"
-              >
-                <FontAwesomeIcon icon={faPlay} className="mr-2" /> Watch Demo
+              <a href="#demo" className="inline-block p-[1.5px] rounded-full bg-gradient-to-r from-[#4f46e5] via-[#7c3aed] to-[#aa00b9]">
+                <span className="flex items-center justify-center bg-white text-violet-700 hover:text-white hover:bg-transparent font-semibold px-7 py-3 rounded-full transition-all">
+                  <FontAwesomeIcon icon={faPlay} className="mr-2" />
+                  Watch Demo
+                </span>
               </a>
             </div>
           </div>

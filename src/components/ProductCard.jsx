@@ -12,7 +12,7 @@ const periodLabel = {
   "one-time": " One-Time",
 };
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, onAddToCart, inCart }) => {
   const { name, description, price, period, tag, tagType, features, icon } = product;
 
   return (
@@ -27,7 +27,7 @@ const ProductCard = ({ product }) => {
         {tag}
       </span>
 
-      {/* Icon + Name */}
+      {/* Icon and Name */}
       <div className="flex items-center gap-3">
         <div className="w-12 h-12 bg-violet-50 rounded-xl flex items-center justify-center text-2xl group-hover:bg-violet-100 transition-colors">
           {icon}
@@ -44,7 +44,7 @@ const ProductCard = ({ product }) => {
         <span className="text-gray-400 text-sm">{periodLabel[period] || period}</span>
       </div>
 
-      {/* Features */}
+      {/* Features List */}
       <ul className="flex flex-col gap-2">
         {features.map((feature, i) => (
           <li key={i} className="flex items-center gap-2 text-sm text-gray-600">
@@ -54,11 +54,17 @@ const ProductCard = ({ product }) => {
         ))}
       </ul>
 
-      {/* Button - UI only, no handler yet */}
+      {/* Buy now Btn */}
       <button
-        className="mt-auto w-full py-2.5 rounded-xl text-sm font-semibold bg-violet-600 hover:bg-violet-700 text-white hover:shadow-md hover:shadow-violet-200 transition-all"
+        onClick={() => onAddToCart(product)}
+        disabled={inCart}
+        className={`mt-auto w-full py-2.5 rounded-xl text-sm font-semibold transition-all ${
+          inCart
+            ? "bg-emerald-50 text-emerald-600 border border-emerald-200 cursor-default"
+            : "bg-violet-600 hover:bg-violet-700 text-white hover:shadow-md hover:shadow-violet-200"
+        }`}
       >
-        Buy Now
+        {inCart ? "✓ Added to Cart" : "Buy Now"}
       </button>
 
     </div>

@@ -1,5 +1,6 @@
-import logo from "../assets/DigiTools.png";
-const Navbar = () => {
+import { ShoppingCart } from "lucide-react";
+
+const Navbar = ({ cartCount }) => {
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -7,7 +8,8 @@ const Navbar = () => {
 
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <img src={logo} alt="DigiTools" className="h-8 w-auto object-contain" />
+            <span className="text-4xl font-bold">
+              <span className="bg-gradient-to-r from-[#4f46e5] via-[#7c3aed] to-[#aa00b9] bg-clip-text text-transparent text-">DigiTools</span></span>         
           </div>
 
           {/* Nav Links */}
@@ -25,13 +27,29 @@ const Navbar = () => {
 
           {/* Actions */}
           <div className="flex items-center gap-3">
+
+            {/* Cart Icon with live count badge */}
+            <div className="relative">
+              <button className="p-2 text-gray-600 hover:text-violet-600 transition-colors">
+                <ShoppingCart size={22} />
+              </button>
+              {cartCount > 0 && (
+                <span className="absolute -top-1 -right-1 bg-violet-600 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">
+                  {cartCount}
+                </span>
+              )}
+            </div>
+
             <a
               href="#"
               className="hidden sm:block text-sm font-medium text-gray-600 hover:text-violet-600 transition-colors px-3 py-2"
             >
               Login
             </a>
-            <a href="#" className="bg-gradient-to-r from-violet-700 to-violet-600 hover:from-violet-800 hover:to-violet-700 text-white text-sm font-semibold px-5 py-2 rounded-full transition-all">
+            <a
+              href="#"
+              className="bg-gradient-to-r from-[#4f46e5] via-[#7c3aed] to-[#aa00b9] hover:bg-violet-700 text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors"
+            >
               Get Started
             </a>
           </div>

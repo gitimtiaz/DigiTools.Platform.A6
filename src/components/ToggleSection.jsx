@@ -2,9 +2,8 @@ import { useState } from "react";
 import ProductList from "./ProductList";
 import Cart from "./Cart";
 
-const ToggleSection = () => {
+const ToggleSection = ({ cart, onAddToCart, onRemove, onCheckout }) => {
   const [activeTab, setActiveTab] = useState("products");
-  const cart = [];
 
   return (
     <section id="products" className="bg-gray-50 py-16">
@@ -40,17 +39,17 @@ const ToggleSection = () => {
                   : "text-gray-600 hover:text-violet-600 hover:bg-violet-50"
               }`}
             >
-              Cart
+              Cart {cart.length > 0 && `(${cart.length})`}
             </button>
           </div>
         </div>
 
-        {/* Content */}
+        {/* Toggle Content */}
         {activeTab === "products" ? (
-          <ProductList />
+          <ProductList cart={cart} onAddToCart={onAddToCart} />
         ) : (
           <div className="max-w-3xl mx-auto">
-            <Cart cart={cart} />
+            <Cart cart={cart} onRemove={onRemove} onCheckout={onCheckout} />
           </div>
         )}
 

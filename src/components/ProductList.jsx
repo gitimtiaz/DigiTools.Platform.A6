@@ -1,13 +1,15 @@
 import ProductCard from "./ProductCard";
 import products from "../data/products";
 
-const ProductList = () => {
+const ProductList = ({ cart, onAddToCart }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {products.map((product) => (
         <ProductCard
           key={product.id}
           product={product}
+          onAddToCart={onAddToCart}
+          inCart={cart.some((item) => item.id === product.id)}
         />
       ))}
     </div>
