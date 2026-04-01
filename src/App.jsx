@@ -7,6 +7,7 @@ import Banner from "./components/Banner";
 import Stats from "./components/Stats";
 import ToggleSection from "./components/ToggleSection";
 import Steps from "./components/Steps";
+import Pricing from "./components/Pricing";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -55,6 +56,7 @@ function App() {
         onCheckout={handleCheckout}
       />
       <Steps />
+      <Pricing />
 
       <ToastContainer
         toastClassName="rounded-xl shadow-lg text-sm font-medium"
