@@ -33,7 +33,7 @@ const Cart = ({ cart, onRemove, onCheckout }) => {
               {item.icon}
             </div>
 
-            {/* Name + Price */}
+            {/* Name and Price */}
             <div className="flex-1 min-w-0">
               <p className="text-gray-900 font-semibold text-sm truncate">{item.name}</p>
               <p className="text-gray-500 text-sm">${item.price}</p>

@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Stats from "./components/Stats";
 import ToggleSection from "./components/ToggleSection";
+import Steps from "./components/Steps";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -53,8 +54,8 @@ function App() {
         onRemove={handleRemove}
         onCheckout={handleCheckout}
       />
+      <Steps />
 
-      {/* Toast Notification Container */}
       <ToastContainer
         toastClassName="rounded-xl shadow-lg text-sm font-medium"
         bodyClassName="py-1"
