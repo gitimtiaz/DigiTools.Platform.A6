@@ -9,6 +9,7 @@ import ToggleSection from "./components/ToggleSection";
 import Steps from "./components/Steps";
 import Pricing from "./components/Pricing";
 import CTA from "./components/CTA";
+import Footer from "./components/Footer";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -59,6 +60,7 @@ function App() {
       <Steps />
       <Pricing />
       <CTA />
+      <Footer />
 
       <ToastContainer
         toastClassName="rounded-xl shadow-lg text-sm font-medium"
