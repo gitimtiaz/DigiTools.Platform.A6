@@ -1,16 +1,72 @@
-# React + Vite
+# DigiTools Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A digital tools marketplace built with React where users can browse premium tools, add them to a cart, and manage their purchases — all in a clean, responsive UI.
 
-Currently, two official plugins are available:
+🔗 **Live Site:** [digitools-a6-imtiaz.netlify.app](https://digitools-a6-imtiaz.netlify.app/)
+📁 **Repository:** [github.com/gitimtiaz/DigiTools.Platform.A6](https://github.com/gitimtiaz/DigiTools.Platform.A6)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🛍️ Browse 8 premium digital products with details and pricing
+- 🛒 Add products to cart with a single click
+- ❌ Remove individual items from the cart
+- 💰 Live cart total calculation
+- 🔄 Toggle between Products and Cart view
+- 🔔 Toast notifications for add, remove, and checkout actions
+- 📱 Fully responsive across all screen sizes
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎥 Demo Overview
+
+### 🖥️ UI & Responsive Design
+A seamless walkthrough of the full interface. This showcases the responsive Tailwind CSS layout, including the sticky Navbar, hero Banner, product grid, dynamic Pricing cards, and Footer.
+
+![UI Overview](./src/screenshots/UI.overview.gif)
+
+---
+
+### 🛒 React State & Cart Logic
+Demonstrates the core application logic: adding products to the cart, real-time badge updates, dynamic total calculation, removing items, and triggering toast notifications upon checkout.
+
+![Cart Functionality](./src/screenshots/Cart.function.gif)
+
+## Tech Stack
+
+| Tech | Purpose |
+|---|---|
+| React.js | Component-based UI |
+| Tailwind CSS | Utility-first styling |
+| DaisyUI | Tailwind component library |
+| JavaScript ES6+ | App logic |
+| React Toastify | Toast notifications |
+| Vite | Build tool |
+
+---
+
+## Getting Started
+
+```bash
+# Clone the repo
+git clone https://github.com/gitimtiaz/DigiTools.Platform.A6.git
+
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
+```
+
+---
+
+## Highlights
+
+- **Clean component structure** — every section is a separate, reusable component with logic kept out of the UI
+- **Scalable data handling** — all product data lives in `src/data/products.js`, ready to be swapped with an API call
+- **Smooth UX** — toast notifications, button state changes, and hover effects make interactions feel polished
+
+---
+
+© 2026 DigiTools. Built by [Imtiaz](https://github.com/gitimtiaz)
