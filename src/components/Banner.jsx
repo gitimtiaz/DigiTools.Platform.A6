@@ -11,10 +11,19 @@ const Banner = () => {
 
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
-            <span className="inline-flex items-center gap-2 bg-violet-50 border border-violet-200 text-violet-700 text-xs font-semibold px-4 py-1.5 rounded-full">
-              <span className="w-1.5 h-1.5 bg-violet-500 rounded-full animate-pulse"></span>
-              New: AI-Powered Tools Available
+            {/* New Feature Text */}
+            <span className="inline-flex items-center gap-2 bg-[#E9EDFF] border border-violet-200 px-4 py-1.5 rounded-full">
+
+              <span className="relative flex items-center justify-center w-5 h-5">
+                <span className="absolute w-5 h-5 bg-violet-400/20 rounded-full"></span>
+                <span className="absolute w-3.5 h-3.5 bg-violet-500/40 rounded-full"></span>
+                <span className="w-2 h-2 bg-violet-600 rounded-full"></span>
+              </span>
+              <span className="text-xs font-semibold bg-gradient-to-r from-[#4f46e5] via-[#7c3aed] to-[#9333ea] bg-clip-text text-transparent">
+                New: AI-Powered Tools Available
+              </span>
             </span>
+            {/* Main Heading */}
             <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
               Supercharge Your{" "}Digital Workflow
             </h1>
@@ -22,11 +31,13 @@ const Banner = () => {
               Access premium AI tools, design assets, templates, and productivity
               software-all in one place. Start creating faster today.
             </p>
+            {/* Btn Group */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a
-                href="#products"
-                className="bg-gradient-to-r from-[#4f46e5] via-[#7c3aed] to-[#aa00b9] hover:from-violet-700 hover:via-[#711eff] hover:to-[#c206d3] text-white font-semibold px-7 py-3 rounded-full transition-all hover:shadow-lg hover:shadow-violet-200"
-              >
+              <a href="#products" className="bg-gradient-to-r from-[#4f46e5] via-[#6d28d9] to-[#9333ea] 
+                                              hover:from-[#4338ca] hover:via-[#5b21b6] hover:to-[#7e22ce]
+                                              text-white font-semibold px-7 py-3 rounded-full 
+                                              transition-all duration-300 ease-in-out 
+                                              hover:shadow-lg hover:shadow-violet-300/40 hover:scale-[1.03]">
                 Explore Products
               </a>
               <a href="#demo" className="inline-block p-[1.5px] rounded-full bg-gradient-to-r from-[#4f46e5] via-[#7c3aed] to-[#aa00b9]">
