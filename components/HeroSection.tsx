@@ -19,7 +19,7 @@ export default function HeroSection() {
           alt="Imtiaz Ahamed Profile Photo"
           width={160}
           height={160}
-          className="relative w-40 h-40 rounded-full object-cover border-2 border-white/10"
+          className="relative w-40 h-40 rounded-full object-cover object-top border-2 border-white/10"
           priority
           unoptimized
         />
