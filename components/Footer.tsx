@@ -10,7 +10,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="w-full py-12 bg-slate-950 border-t border-white/5">
+    <footer className="w-full py-12 glass-nav relative z-10 border-t border-white/5 mt-auto">
       <div className="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto text-sm font-inter text-slate-500 gap-6">
         <div>
           <p className="text-center md:text-left">
@@ -26,7 +26,7 @@ export default function Footer() {
             <Link
               key={label}
               href={`#${label.toLowerCase()}`}
-              className="text-slate-500 hover:text-indigo-400 transition-colors hover:-translate-y-1 transform duration-200"
+              className="text-slate-500 hover:text-primary transition-colors hover:-translate-y-1 transform duration-200"
             >
               {label}
             </Link>
@@ -40,7 +40,7 @@ export default function Footer() {
                 aria-label={label}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="material-symbols-outlined text-slate-500 hover:text-indigo-400 transition-colors hover:-translate-y-1 transform duration-200"
+                className="material-symbols-outlined text-slate-500 hover:text-primary hover:shadow-[0_0_15px_rgba(192,193,255,0.2)] transition-all hover:-translate-y-1 transform duration-200 rounded-full p-1"
               >
                 {icon}
               </a>

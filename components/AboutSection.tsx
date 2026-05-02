@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const stats = [
   { value: "2+", label: "Years Experience" },
   { value: "10+", label: "Projects Done" },
@@ -9,11 +13,17 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="py-[120px] px-[clamp(1.5rem,5vw,4rem)] max-w-[1280px] mx-auto"
+      className="py-[120px] px-[clamp(1.5rem,5vw,4rem)] max-w-[1280px] mx-auto overflow-hidden"
     >
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Text */}
-        <div className="space-y-6">
+        <motion.div 
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="space-y-6"
+        >
           <span className="font-label-caps text-label-caps text-primary uppercase tracking-widest">
             The Journey
           </span>
@@ -49,23 +59,33 @@ export default function AboutSection() {
             <span className="material-symbols-outlined">location_on</span>
             <span className="font-semibold">Mirpur-12, Dhaka, Bangladesh</span>
           </div>
-        </div>
+        </motion.div>
 
         {/* Stats Card */}
-        <div className="glass-card rounded-3xl p-8 relative overflow-hidden group">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+        <motion.div 
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          className="glass-card rounded-3xl p-8 relative group"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl" />
           <div className="grid grid-cols-2 gap-6 relative">
-            {stats.map(({ value, label }) => (
-              <div
+            {stats.map(({ value, label }, index) => (
+              <motion.div
                 key={label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                 className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/20 transition-colors"
               >
                 <span className="block text-h3 font-h3 text-white">{value}</span>
                 <span className="text-sm text-slate-400">{label}</span>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

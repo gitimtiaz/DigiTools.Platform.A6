@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { motion } from "framer-motion";
 
 export default function ContactSection() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -8,7 +9,7 @@ export default function ContactSection() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    // Replace with your preferred form backend (e.g. Formspree, EmailJS)
+    // Replace with your preferred form backend
     console.log("Form submitted:", form);
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 4000);
@@ -16,8 +17,14 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-[120px] px-[clamp(1.5rem,5vw,4rem)]">
-      <div className="max-w-4xl mx-auto glass-card rounded-3xl p-12 relative overflow-hidden">
+    <section id="contact" className="py-[120px] px-[clamp(1.5rem,5vw,4rem)] overflow-hidden">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="max-w-4xl mx-auto glass-card rounded-3xl p-12 relative overflow-hidden"
+      >
         {/* Background glow */}
         <div className="hero-glow top-0 right-0 opacity-20" />
 
@@ -33,7 +40,7 @@ export default function ContactSection() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div className="space-y-6">
-            <div className="flex items-center gap-4">
+            <motion.div whileHover={{ x: 5 }} className="flex items-center gap-4 transition-transform">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
                 <span className="material-symbols-outlined">mail</span>
               </div>
@@ -48,9 +55,9 @@ export default function ContactSection() {
                   imtiazahamed@dev.com
                 </a>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex items-center gap-4">
+            <motion.div whileHover={{ x: 5 }} className="flex items-center gap-4 transition-transform">
               <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
                 <span className="material-symbols-outlined">location_on</span>
               </div>
@@ -60,9 +67,9 @@ export default function ContactSection() {
                 </p>
                 <p className="font-semibold">Mirpur-12, Dhaka, Bangladesh</p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex items-center gap-4">
+            <motion.div whileHover={{ x: 5 }} className="flex items-center gap-4 transition-transform">
               <div className="w-12 h-12 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary shrink-0">
                 <span className="material-symbols-outlined">person</span>
               </div>
@@ -89,7 +96,7 @@ export default function ContactSection() {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Contact Form */}
@@ -101,7 +108,7 @@ export default function ContactSection() {
               required
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-primary transition-colors text-white placeholder:text-slate-500"
+              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-primary focus:bg-white/10 focus:shadow-[0_0_15px_rgba(192,193,255,0.2)] transition-all text-white placeholder:text-slate-500"
             />
             <input
               id="contact-email"
@@ -110,7 +117,7 @@ export default function ContactSection() {
               required
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-primary transition-colors text-white placeholder:text-slate-500"
+              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-primary focus:bg-white/10 focus:shadow-[0_0_15px_rgba(192,193,255,0.2)] transition-all text-white placeholder:text-slate-500"
             />
             <textarea
               id="contact-message"
@@ -119,7 +126,7 @@ export default function ContactSection() {
               required
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-primary transition-colors text-white placeholder:text-slate-500 resize-none"
+              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-primary focus:bg-white/10 focus:shadow-[0_0_15px_rgba(192,193,255,0.2)] transition-all text-white placeholder:text-slate-500 resize-none"
             />
             <button
               id="contact-submit"
@@ -137,7 +144,7 @@ export default function ContactSection() {
             </button>
           </form>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

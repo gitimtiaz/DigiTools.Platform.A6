@@ -14,9 +14,11 @@ const navLinks = [
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
       const sections = ["home", "about", "skills", "projects", "contact"];
       let current = "home";
       for (const id of sections) {
@@ -32,8 +34,14 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-slate-950/50 backdrop-blur-xl border-b border-white/5">
-      <div className="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto font-inter tracking-tight">
+    <nav 
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled 
+          ? "glass-nav py-1" 
+          : "bg-slate-950/30 backdrop-blur-sm border-b border-transparent py-4"
+      }`}
+    >
+      <div className="flex justify-between items-center h-16 md:h-20 px-8 max-w-7xl mx-auto font-inter tracking-tight">
         {/* Logo */}
         <Link
           href="#home"
@@ -98,7 +106,7 @@ export default function Navbar() {
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? "max-h-80 border-t border-white/5" : "max-h-0"}`}
       >
-        <div className="flex flex-col px-8 py-4 space-y-4 bg-slate-950/80 backdrop-blur-xl">
+        <div className="flex flex-col px-8 py-4 space-y-4 glass-nav border-t border-white/5">
           {navLinks.map(({ href, label }) => (
             <Link
               key={href}
