@@ -47,7 +47,7 @@ export default function Navbar() {
           href="#home"
           className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-violet-400"
         >
-          Imtiaz.dev
+          Imtiaz
         </Link>
 
         {/* Desktop Nav */}
@@ -75,7 +75,7 @@ export default function Navbar() {
         {/* Resume + Hamburger */}
         <div className="flex items-center gap-4">
           <a
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/1NxZ4eoZkNL1vOcptAu8krkNkiWdx_yy4/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-2 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold text-sm hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] transition-all active:scale-95"

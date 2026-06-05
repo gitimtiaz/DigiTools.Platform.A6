@@ -52,7 +52,7 @@ export default function ContactSection() {
                   href="mailto:imtiazahamed@dev.com"
                   className="font-semibold hover:text-primary transition-colors"
                 >
-                  imtiazahamed@dev.com
+                  imtiazp32@gmail.com
                 </a>
               </div>
             </motion.div>
@@ -79,7 +79,7 @@ export default function ContactSection() {
                 </p>
                 <div className="flex gap-4 mt-1">
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/imtiaz-cse-ahamed/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-primary transition-colors font-semibold"

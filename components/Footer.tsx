@@ -4,7 +4,7 @@ const footerLinks = ["Home", "About", "Projects", "Contact"];
 
 const socialLinks = [
   { icon: "code", href: "https://github.com/gitimtiaz", label: "GitHub" },
-  { icon: "person", href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: "person", href: "https://www.linkedin.com/in/imtiaz-cse-ahamed/", label: "LinkedIn" },
   { icon: "public", href: "#", label: "Website" },
 ];
 

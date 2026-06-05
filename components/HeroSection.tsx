@@ -31,7 +31,7 @@ export default function HeroSection() {
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         >
           <Image
-            src="https://lh3.googleusercontent.com/aida/ADBb0uhEx3KVj79Js0GAzrursnTE4---FLm3lXPvRe0DZO4iwYoQIApZN_OhyzvsPjcCGSCZJxd6d0AJHq5cRPDjMdPjZ1Pbo-mq1OtjhkDXv87sdZyzRp1qOBSK9qdDjh6AL2Xlwskf3oL7iwYAboJkr3fgXN5JrH93cgLRV8avV5UQ6c6Ugy-62wgjmvGYym-PeD9kaumXUB28llc1YnvGO1qqVwRK0d25G9m7TgXycr831Dv0Ic5vbHUDTE2G8O0Xg1dn_TMDhG3h1Mo"
+            src="/hero-bg.png"
             alt="Imtiaz Ahamed Profile Photo"
             width={160}
             height={160}
@@ -57,7 +57,7 @@ export default function HeroSection() {
         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         className="text-gradient font-h3 text-h3 mb-6 max-w-2xl"
       >
-        👉 Frontend-Focused Web Developer | Next.js &amp; React Enthusiast
+        Junior MERN Developer
       </motion.p>
 
       {/* Description */}
